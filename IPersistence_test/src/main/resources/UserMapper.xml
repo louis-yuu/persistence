@@ -1,0 +1,38 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yunbao.mapper.UserMapper">
+
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="com.yunbao.pojo.User">
+
+        select * from user where id=#{id}
+
+    </select>
+
+
+    <insert id="save" parameterType="com.yunbao.pojo.User">
+
+        insert into user values (#{id},#{username})
+    </insert>
+
+
+
+    <update id="update" parameterType="com.yunbao.pojo.User">
+
+        update user set username=#{username} where id=#{id}
+    </update>
+
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+
+        delete from user where id=#{id}
+    </delete>
+
+
+    <select id="selectAll" parameterType="com.yunbao.pojo.User" resultType="com.yunbao.pojo.User">
+
+        select * from user
+
+    </select>
+
+
+</mapper>

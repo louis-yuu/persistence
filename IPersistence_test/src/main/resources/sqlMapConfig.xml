@@ -1,0 +1,13 @@
+<configuration>
+
+
+    <!--   数据库配置信息    -->
+    <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+    <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/study"></property>
+    <property name="user" value="root"></property>
+    <property name="password" value="123456"></property>
+
+
+    <mapper resource="UserMapper.xml"></mapper>
+
+</configuration>
